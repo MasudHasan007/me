@@ -83,11 +83,25 @@ a:hover {
   background-position: center center;
 }
 
+.paralax-mf {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  /* Add any additional styles for the parallax section here */
+}
+
 @media (max-width: 1024px) {
-  .bg-image {
+  .paralax-mf {
     background-attachment: scroll;
   }
 }
+
+/* Adjust padding for the previous section */
+.section-image {
+  padding-bottom: 100px; /* Adjust the value as needed */
+}
+
 
 .overlay-mf {
   background-color: #0078ff;
