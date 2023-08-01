@@ -23,6 +23,23 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Additional CSS for the Fade-In Effect -->
+  <style>
+    /* Define the fade-in animation */
+    @keyframes fade-in {
+      from {
+        opacity: 0; /* Start the animation with 0 opacity (completely transparent) */
+      }
+      to {
+        opacity: 1; /* End the animation with 1 opacity (fully visible) */
+      }
+    }
+
+    /* Apply the fade-in animation to the intro content */
+    .intro-content {
+      animation: fade-in 1.5s ease-in-out; /* Apply the fade-in animation with 1.5s duration and ease-in-out timing */
+    }
+  </style>
 </head>
 
 <body id="page-top">
@@ -65,12 +82,20 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h1 class="intro-title mb-4"></h1>
-          <p class="intro-subtitle">Data Analyst | Business Analyst</p>
+          <!-- Added class "intro-title" for the fade-in effect -->
+          <h1 class="intro-title mb-4 intro-content">Masud's Portfolio</h1>
+          <!-- Added class "intro-subtitle" for the fade-in effect -->
+          <p class="intro-subtitle intro-content">Data Analyst | Business Analyst</p>
         </div>
       </div>
     </div>
   </div><!-- End Intro Section -->
+
+  <!-- ... Existing JavaScript and other content ... -->
+</body>
+
+</html>
+
 
   <!-- ======= Parallax Section ======= -->
 <section class="paralax-mf section-image bg-image" style="background-image: url(assets/img/mm.jpg);">
