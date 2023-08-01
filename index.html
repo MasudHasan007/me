@@ -23,23 +23,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Additional CSS for the Fade-In Effect -->
+  <!-- Additional CSS for the initial opacity of 0 (completely transparent) -->
   <style>
-    /* Define the fade-in animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Start the animation with 0 opacity (completely transparent) */
-      }
-      to {
-        opacity: 1; /* End the animation with 1 opacity (fully visible) */
-      }
-    }
-
-    /* Apply the fade-in animation to the "Welcome to my portfolio" statement */
     .intro-title {
-      animation: fadeIn 1.5s ease-in-out;
-      animation-delay: 0.5s; /* Add a delay of 0.5 seconds before starting the animation */
-      animation-fill-mode: forwards; /* Ensure the element retains the style properties of the last keyframe (fully visible) */
+      opacity: 0;
     }
   </style>
 </head>
@@ -66,9 +53,19 @@
   </div><!-- End Intro Section -->
 
   <!-- ... Existing JavaScript and other content ... -->
+
+  <!-- Script to add the fade-in effect with JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const introTitle = document.querySelector('.intro-title');
+      introTitle.style.opacity = 1;
+      introTitle.style.transition = 'opacity 1.5s ease-in-out';
+    });
+  </script>
 </body>
 
 </html>
+
 
 
   
