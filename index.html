@@ -23,10 +23,18 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Additional CSS for the initial opacity of 0 (completely transparent) -->
+  <!-- Additional CSS for the initial opacity and scale of 0 (completely transparent and smaller size) -->
   <style>
     .intro-title {
       opacity: 0;
+      transform: scale(0.9); /* Slightly smaller size to create a scale-up effect */
+      transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* CSS transitions for the fade-in and scale-up effects */
+    }
+
+    /* Add a class to trigger the fade-in and scale-up animation */
+    .fade-in {
+      opacity: 1;
+      transform: scale(1); /* Return to the original size after the scale-up effect */
     }
   </style>
 </head>
@@ -44,8 +52,8 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <!-- Added the class "intro-title" for the fade-in effect -->
-          <h1 class="intro-title mb-4">WELCOME TO MY PORTFOLIO</h1>
+          <!-- Added the class "intro-title" and "fade-in" for the fade-in and scale-up effect -->
+          <h1 class="intro-title mb-4 fade-in">Welcome to my portfolio</h1>
           <p class="intro-subtitle">Data Analyst | Business Analyst</p>
         </div>
       </div>
@@ -54,30 +62,6 @@
 
   <!-- ... Existing JavaScript and other content ... -->
 
-  <!-- Script to add the fade-in effect with JavaScript -->
-  <script>
-    // Function to add the fade-in effect with a delay
-    function fadeInWithDelay(element, delay) {
-      setTimeout(function () {
-        let opacity = 0;
-        const interval = 50; // Time interval for the fade-in effect (in milliseconds)
-
-        const fadeInInterval = setInterval(function () {
-          opacity += 0.02; // Increment opacity in steps
-          element.style.opacity = opacity;
-
-          if (opacity >= 1) {
-            clearInterval(fadeInInterval); // Stop the interval when opacity reaches 1 (fully visible)
-          }
-        }, interval);
-      }, delay);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const introTitle = document.querySelector('.intro-title');
-      fadeInWithDelay(introTitle, 1000); // Apply the fade-in effect to the intro title with a 1-second delay
-    });
-  </script>
 </body>
 
 </html>
