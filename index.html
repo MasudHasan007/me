@@ -56,15 +56,30 @@
 
   <!-- Script to add the fade-in effect with JavaScript -->
   <script>
+    // Function to add the fade-in effect
+    function fadeIn(element) {
+      let opacity = 0;
+      const interval = 50; // Time interval for the fade-in effect (in milliseconds)
+
+      const fadeInInterval = setInterval(function () {
+        opacity += 0.02; // Increment opacity in steps
+        element.style.opacity = opacity;
+
+        if (opacity >= 1) {
+          clearInterval(fadeInInterval); // Stop the interval when opacity reaches 1 (fully visible)
+        }
+      }, interval);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       const introTitle = document.querySelector('.intro-title');
-      introTitle.style.opacity = 1;
-      introTitle.style.transition = 'opacity 1.5s ease-in-out';
+      fadeIn(introTitle); // Apply the fade-in effect to the intro title
     });
   </script>
 </body>
 
 </html>
+
 
 
 
