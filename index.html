@@ -85,7 +85,7 @@
       <div class="table-cell">
         <div class="container">
           <!-- Added the class "intro-title" for the fade-in effect -->
-          <h1 class="intro-title mb-4" style="font-size: 40px;">WELCOME TO MY PORTFOLIO</h1>
+          <h1 class="intro-title mb-4" style="font-size: 36px;">WELCOME TO MY PORTFOLIO</h1>
           <p class="intro-subtitle">Data Analyst | Business Analyst</p>
         </div>
       </div>
@@ -114,12 +114,32 @@
 
   <!-- ... Other sections ... -->
 
-  <!-- ... JavaScript and other content ... -->
+  <!-- Script for smooth scrolling and fade-in effect -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.addEventListener('click', function (event) {
+      if (event.target.matches('.nav-link')) {
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Fade-in effect for intro title
+    document.addEventListener('DOMContentLoaded', function () {
+      const introTitle = document.querySelector('.intro-title');
+      introTitle.style.opacity = 1; // Set opacity to 1 to make text visible
+    });
+  </script>
+
+  <!-- ... Other content ... -->
 
 </body>
 
 </html>
-
 
 
   
