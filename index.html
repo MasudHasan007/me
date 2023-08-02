@@ -36,18 +36,7 @@
         transform: translateX(0);
       }
     }
-      @keyframes fade-left {
-    0% {
-      opacity: 0;
-      transform: translateX(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-</style>
-
+  </style>
 </head>
 
 <body id="page-top">
@@ -468,13 +457,13 @@
       }
     });
 
-    // Fade-in effect for intro title and fade-left elements
+    // Fade-in effect for intro title and fade-right elements
     document.addEventListener('DOMContentLoaded', function () {
       const introTitle = document.querySelector('.intro-title');
       introTitle.style.opacity = 1;
 
-      const fadeLeftElements = document.querySelectorAll('.fade-left');
-      fadeLeftElements.forEach(element => {
+      const fadeRightElements = document.querySelectorAll('.fade-right');
+      fadeRightElements.forEach(element => {
         element.style.opacity = 1;
         element.style.transform = 'translateX(0)';
       });
