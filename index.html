@@ -23,12 +23,18 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Additional CSS for the initial opacity of 0 (completely transparent) and progress bar animation -->
+  <!-- Additional CSS for the initial opacity of 0 (completely transparent) and fade-right animation -->
   <style>
     .intro-title {
       opacity: 0;
       line-height: 1.2;
       animation: fadeIn 1.5s ease-out 2s forwards;
+    }
+
+    .fade-right {
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: fadeRight 1.5s ease-out 0.5s forwards;
     }
 
     @keyframes fadeIn {
@@ -40,26 +46,6 @@
         opacity: 1;
         transform: scale(1);
       }
-    }
-
-    .progress-bar {
-      animation: fillProgress 1.5s ease-out forwards;
-    }
-
-    @keyframes fillProgress {
-      from {
-        width: 0;
-      }
-      to {
-        width: var(--progress-width);
-      }
-    }
-
-    /* Additional CSS for the fade-right animation */
-    .fade-right {
-      opacity: 0;
-      transform: translateX(-20px);
-      animation: fadeRight 1.5s ease-out 0.5s forwards;
     }
 
     @keyframes fadeRight {
@@ -182,7 +168,7 @@
                         About me
                       </h5>
                     </div>
-                    <p class="lead">
+                    <p class="lead fade-right">
                       Greetings! I am Masud Hasan, a passionate and certified Data Analyst/Business Analyst with
                       a mission to empower organizations to harness the full potential of their data. My expertise 
                       lies in guiding businesses from ideation to impactful data-driven decisions, and I thrive on 
@@ -493,10 +479,16 @@
       }
     });
 
-    // Fade-in effect for intro title
+    // Fade-in effect for intro title and fade-right elements
     document.addEventListener('DOMContentLoaded', function () {
       const introTitle = document.querySelector('.intro-title');
-      introTitle.style.opacity = 1; // Set opacity to 1 to make text visible
+      introTitle.style.opacity = 1;
+
+      const fadeRightElements = document.querySelectorAll('.fade-right');
+      fadeRightElements.forEach(element => {
+        element.style.opacity = 1;
+        element.style.transform = 'translateX(0)';
+      });
     });
   </script>
 
