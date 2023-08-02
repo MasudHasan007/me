@@ -36,7 +36,18 @@
         transform: translateX(0);
       }
     }
-  </style>
+      @keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
 </head>
 
 <body id="page-top">
@@ -146,7 +157,7 @@
                         About me
                       </h5>
                     </div>
-                    <p class="lead about-description">
+                    <p class="lead fade-left">
                       Greetings! I am Masud Hasan, a passionate and certified Data Analyst/Business Analyst with
                       a mission to empower organizations to harness the full potential of their data. My expertise 
                       lies in guiding businesses from ideation to impactful data-driven decisions, and I thrive on 
@@ -457,13 +468,13 @@
       }
     });
 
-    // Fade-in effect for intro title and fade-right elements
+    // Fade-in effect for intro title and fade-left elements
     document.addEventListener('DOMContentLoaded', function () {
       const introTitle = document.querySelector('.intro-title');
       introTitle.style.opacity = 1;
 
-      const fadeRightElements = document.querySelectorAll('.fade-right');
-      fadeRightElements.forEach(element => {
+      const fadeLeftElements = document.querySelectorAll('.fade-left');
+      fadeLeftElements.forEach(element => {
         element.style.opacity = 1;
         element.style.transform = 'translateX(0)';
       });
