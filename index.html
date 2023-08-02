@@ -25,30 +25,10 @@
 
   <!-- Additional CSS for the initial opacity of 0 (completely transparent) -->
   <style>
-    /* ... (existing additional CSS) ... */
-
-    /* Additional CSS for hero banner effect */
     .intro-title {
       opacity: 0;
-      line-height: 1.2;
-      font-size: 40px;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      color: #fff;
-      position: relative;
-      animation: fadeIn 1.5s ease-out 2s forwards;
-    }
-
-    .intro-title::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
-      z-index: -1;
-      animation: fadeInBackground 1.5s ease-out 2s forwards;
+      line-height: 1.2; /* Adjust the line-height to vertically center the text */
+      animation: fadeIn 1.5s ease-out 2s forwards; /* Apply the fade-in animation with a delay of 2 seconds */
     }
 
     @keyframes fadeIn {
@@ -59,15 +39,6 @@
       100% {
         opacity: 1;
         transform: scale(1);
-      }
-    }
-
-    @keyframes fadeInBackground {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
       }
     }
   </style>
