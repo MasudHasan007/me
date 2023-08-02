@@ -27,8 +27,39 @@
   <style>
     .intro-title {
       opacity: 0;
-      line-height: 1.2; /* Adjust the line-height to vertically center the text */
-      animation: fadeIn 1.5s ease-out 2s forwards; /* Apply the fade-in animation with a delay of 2 seconds */
+      line-height: 1.2;
+      font-size: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      color: #fff;
+      position: relative;
+      animation: fadeIn 1.5s ease-out 2s forwards;
+    }
+
+    .intro-title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+      z-index: -1;
+      animation: fadeInBackground 1.5s ease-out 2s forwards;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: scale(1.05);
     }
 
     @keyframes fadeIn {
@@ -41,8 +72,18 @@
         transform: scale(1);
       }
     }
+
+    @keyframes fadeInBackground {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
+
 <body id="page-top">
 
   <!-- ======= Header/ Navbar ======= -->
@@ -84,7 +125,7 @@
         <div class="container">
           <!-- Added the class "intro-title" for the fade-in effect -->
           <h1 class="intro-title mb-4" style="font-size: 40px;">WELCOME TO MY PORTFOLIO</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">Data Analyst,Business Intelligence Analyst,Business Analyst</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
@@ -448,7 +489,7 @@
 
   </main><!-- End #main -->
 
-    <!-- Script for smooth scrolling and fade-in effect -->
+  <!-- Script for smooth scrolling and fade-in effect -->
   <script>
     // Smooth scrolling for anchor links
     document.addEventListener('click', function (event) {
@@ -468,23 +509,6 @@
       introTitle.style.opacity = 1; // Set opacity to 1 to make text visible
     });
   </script>
-
-  <!-- ======= Footer ======= -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/masudhasan2337" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/masudhasan2337" target="_blank"><i class="fa fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
