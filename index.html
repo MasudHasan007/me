@@ -54,6 +54,24 @@
         width: var(--progress-width);
       }
     }
+
+    /* Additional CSS for the fade-right animation */
+    .fade-right {
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: fadeRight 1.5s ease-out 0.5s forwards;
+    }
+
+    @keyframes fadeRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   </style>
 </head>
 
