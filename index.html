@@ -91,57 +91,6 @@
       </div>
     </div>
   </div><!-- End Intro Section -->
-
-  <!-- ... About Section ... -->
-  <section id="about">
-    <!-- ... About content ... -->
-  </section><!-- End About Section -->
-
-  <!-- ... Services Section ... -->
-  <section id="services">
-    <!-- ... Services content ... -->
-  </section><!-- End Services Section -->
-
-  <!-- ... Portfolio Section ... -->
-  <section id="portfolio">
-    <!-- ... Portfolio content ... -->
-  </section><!-- End Portfolio Section -->
-
-  <!-- ... Contact Section ... -->
-  <section id="contact">
-    <!-- ... Contact content ... -->
-  </section><!-- End Contact Section -->
-
-  <!-- ... Other sections ... -->
-
-  <!-- Script for smooth scrolling and fade-in effect -->
-  <script>
-    // Smooth scrolling for anchor links
-    document.addEventListener('click', function (event) {
-      if (event.target.matches('.nav-link')) {
-        event.preventDefault();
-        const targetId = event.target.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-
-    // Fade-in effect for intro title
-    document.addEventListener('DOMContentLoaded', function () {
-      const introTitle = document.querySelector('.intro-title');
-      introTitle.style.opacity = 1; // Set opacity to 1 to make text visible
-    });
-  </script>
-
-  <!-- ... Other content ... -->
-
-</body>
-
-</html>
-
-
   
   <main id="main">
 
@@ -499,6 +448,27 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+    <!-- Script for smooth scrolling and fade-in effect -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.addEventListener('click', function (event) {
+      if (event.target.matches('.js-scroll')) {
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Fade-in effect for intro title
+    document.addEventListener('DOMContentLoaded', function () {
+      const introTitle = document.querySelector('.intro-title');
+      introTitle.style.opacity = 1; // Set opacity to 1 to make text visible
+    });
+  </script>
 
   <!-- ======= Footer ======= -->
   <footer class="footer">
