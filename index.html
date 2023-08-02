@@ -27,8 +27,20 @@
   <style>
     .intro-title {
       opacity: 0;
-      font-size: 15px; /* Set the font size to your desired value (e.g., 36px) */
-      line-height: 5; /* Adjust the line-height to vertically center the text */
+      font-size: 36px; /* Set the font size to your desired value (e.g., 36px) */
+      line-height: 1.2; /* Adjust the line-height to vertically center the text */
+      animation: fadeIn 1.5s ease-out 2s forwards; /* Apply the fade-in animation with a delay of 2 seconds */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -56,33 +68,10 @@
 
   <!-- ... Existing JavaScript and other content ... -->
 
-  <!-- Script to add the fade-in effect with JavaScript -->
-  <script>
-    // Function to add the fade-in effect with a delay
-    function fadeInWithDelay(element, delay) {
-      setTimeout(function () {
-        let opacity = 0;
-        const interval = 50; // Time interval for the fade-in effect (in milliseconds)
-
-        const fadeInInterval = setInterval(function () {
-          opacity += 0.02; // Increment opacity in steps
-          element.style.opacity = opacity;
-
-          if (opacity >= 1) {
-            clearInterval(fadeInInterval); // Stop the interval when opacity reaches 1 (fully visible)
-          }
-        }, interval);
-      }, delay);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const introTitle = document.querySelector('.intro-title');
-      fadeInWithDelay(introTitle, 2000); // Apply the fade-in effect to the intro title with a 2-second delay
-    });
-  </script>
 </body>
 
 </html>
+
 
 
   
