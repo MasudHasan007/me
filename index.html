@@ -4,51 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Masud Hasan - Data Analyst Portfolio</title>
   <meta content="Showcasing my data analysis skills and projects" name="description">
   <meta content="data analyst, data analysis, portfolio" name="keywords">
-
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- Additional CSS for the initial opacity of 0 (completely transparent) and fade-right animation -->
   <style>
-    .intro-title {
+    .intro-title,
+    .about-description {
       opacity: 0;
-      line-height: 1.2;
-      animation: fadeIn 1.5s ease-out 2s forwards;
+      animation: fade-in 1.5s ease-out 2s forwards;
     }
 
-    .fade-right {
-      opacity: 0;
-      transform: translateX(-20px);
-      animation: fadeRight 1.5s ease-out 0.5s forwards;
+    .about-description {
+      animation-delay: 2.5s;
     }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes fadeRight {
+    @keyframes fade-in {
       0% {
         opacity: 0;
         transform: translateX(-20px);
@@ -168,7 +146,7 @@
                         About me
                       </h5>
                     </div>
-                    <p class="lead fade-right">
+                    <p class="lead about-description">
                       Greetings! I am Masud Hasan, a passionate and certified Data Analyst/Business Analyst with
                       a mission to empower organizations to harness the full potential of their data. My expertise 
                       lies in guiding businesses from ideation to impactful data-driven decisions, and I thrive on 
